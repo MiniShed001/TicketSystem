@@ -1,0 +1,94 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "票务大厅",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "subA",
+			"pages": [
+				{
+					"path": "pages/detail/detail",
+					"style": {
+						"navigationBarTitleText": "活动详情"
+					}
+				},
+				{
+					"path": "pages/order/confirm",
+					"style": {
+						"navigationBarTitleText": "确认订单"
+					}
+				}
+			]
+		},
+		{
+			"root": "subB",
+			"pages": [
+				{
+					"path": "pages/orders/list",
+					"style": {
+						"navigationBarTitleText": "我的订单",
+						"enablePullDownRefresh": true,
+						"backgroundTextStyle": "dark"
+					}
+				},
+				{
+					"path": "pages/orders/detail",
+					"style": {
+						"navigationBarTitleText": "订单详情"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["subA"]
+		},
+		"pages/user/index": {
+			"network": "all",
+			"packages": ["subB"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "票务系统",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#f5f6fa"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#ff4d4f",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的"
+			}
+		]
+	}
+}

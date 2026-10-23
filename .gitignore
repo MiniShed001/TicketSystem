@@ -1,0 +1,21 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 本地数据库与上传文件（演示数据不入库）
+backend/db.sqlite3
+backend/media/
+*.log
+
+# Node / Uni-app
+node_modules/
+frontend/dist/
+frontend/.hbuilderx/
+
+# 系统文件
+.DS_Store
+Thumbs.db
